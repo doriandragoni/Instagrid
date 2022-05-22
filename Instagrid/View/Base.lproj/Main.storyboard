@@ -29,46 +29,24 @@
                                     <constraint firstAttribute="width" constant="125" id="pFC-rh-qN8"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZMy-r2-vXD">
-                                <rect key="frame" x="62.666666666666657" y="688" width="249.99999999999997" height="70"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8gZ-sv-Q8h">
+                                <rect key="frame" x="113.66666666666669" y="190.66666666666666" width="148" height="48"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eD9-f5-f3x" userLabel="Layout 1">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="GzG-JO-9uR">
+                                        <rect key="frame" x="66.333333333333329" y="0.0" width="15" height="11.333333333333334"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="eD9-f5-f3x" secondAttribute="height" multiplier="1:1" id="8sH-4J-AK8"/>
+                                            <constraint firstAttribute="width" secondItem="GzG-JO-9uR" secondAttribute="height" multiplier="4:3" id="Bib-SE-ndd"/>
+                                            <constraint firstAttribute="width" constant="15" id="qmz-d7-bea"/>
                                         </constraints>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" backgroundImage="Layout 1"/>
-                                        <connections>
-                                            <action selector="onLayoutOneTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="mSq-0i-Ifb"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPm-8R-rRa" userLabel="Layout 2">
-                                        <rect key="frame" x="90" y="0.0" width="70" height="70"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="cPm-8R-rRa" secondAttribute="height" multiplier="1:1" id="oPF-am-AWl"/>
-                                        </constraints>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" backgroundImage="Layout 2"/>
-                                        <connections>
-                                            <action selector="onLayoutTwoTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="ssW-5h-ktx"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTE-tU-Mfw" userLabel="Layout 3">
-                                        <rect key="frame" x="180" y="0.0" width="70" height="70"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="jTE-tU-Mfw" secondAttribute="height" multiplier="1:1" id="1ot-Q5-whf"/>
-                                        </constraints>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="Selected" backgroundImage="Layout 3"/>
-                                        <connections>
-                                            <action selector="onLayoutThreeTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="XhK-rr-JNS"/>
-                                        </connections>
-                                    </button>
+                                        <variation key="heightClass=compact" image="Arrow Left"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccZ-Xn-9qy">
+                                        <rect key="frame" x="0.0" y="21.333333333333343" width="148" height="26.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="VUT-vh-5kS"/>
-                                </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3vi-4T-2at">
                                 <rect key="frame" x="40" y="258.66666666666669" width="295" height="295.00000000000006"/>
@@ -114,43 +92,101 @@
                                     <constraint firstAttribute="bottom" secondItem="jhH-h6-ifn" secondAttribute="bottom" constant="10" id="sx8-VQ-ZBF"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8gZ-sv-Q8h">
-                                <rect key="frame" x="113.66666666666669" y="190.66666666666666" width="148" height="48"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ZMy-r2-vXD">
+                                <rect key="frame" x="40" y="686.33333333333337" width="295" height="71.666666666666629"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="GzG-JO-9uR">
-                                        <rect key="frame" x="66.333333333333329" y="0.0" width="15" height="11.333333333333334"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eD9-f5-f3x" userLabel="Layout 1">
+                                        <rect key="frame" x="0.0" y="0.0" width="71.666666666666671" height="71.666666666666671"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="GzG-JO-9uR" secondAttribute="height" multiplier="4:3" id="Bib-SE-ndd"/>
-                                            <constraint firstAttribute="width" constant="15" id="qmz-d7-bea"/>
+                                            <constraint firstAttribute="width" secondItem="eD9-f5-f3x" secondAttribute="height" multiplier="1:1" id="8sH-4J-AK8"/>
                                         </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccZ-Xn-9qy">
-                                        <rect key="frame" x="0.0" y="21.333333333333343" width="148" height="26.666666666666671"/>
-                                        <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="24"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" backgroundImage="Layout 1"/>
+                                        <connections>
+                                            <action selector="onLayoutOneTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="mSq-0i-Ifb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPm-8R-rRa" userLabel="Layout 2">
+                                        <rect key="frame" x="111.66666666666666" y="0.0" width="71.666666666666657" height="71.666666666666671"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="cPm-8R-rRa" secondAttribute="height" multiplier="1:1" id="oPF-am-AWl"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" backgroundImage="Layout 2"/>
+                                        <connections>
+                                            <action selector="onLayoutTwoTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="ssW-5h-ktx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTE-tU-Mfw" userLabel="Layout 3">
+                                        <rect key="frame" x="223.33333333333329" y="0.0" width="71.666666666666657" height="71.666666666666671"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="jTE-tU-Mfw" secondAttribute="height" multiplier="1:1" id="1ot-Q5-whf"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="Selected" backgroundImage="Layout 3"/>
+                                        <connections>
+                                            <action selector="onLayoutThreeTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="XhK-rr-JNS"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <variation key="heightClass=compact" axis="vertical"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.71764707569999997" green="0.84313726430000002" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="V4y-5Y-7Gl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="33d-xj-WiI"/>
-                            <constraint firstItem="ZMy-r2-vXD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6ic-P9-06n"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3vi-4T-2at" secondAttribute="bottom" constant="20" id="3xi-V8-fGF"/>
+                            <constraint firstItem="3vi-4T-2at" firstAttribute="leading" secondItem="8gZ-sv-Q8h" secondAttribute="trailing" constant="20" id="5SL-yV-Iik"/>
+                            <constraint firstItem="3vi-4T-2at" firstAttribute="top" secondItem="V4y-5Y-7Gl" secondAttribute="bottom" constant="20" id="6Hz-ZX-EcP"/>
+                            <constraint firstItem="ZMy-r2-vXD" firstAttribute="centerX" secondItem="3vi-4T-2at" secondAttribute="centerX" id="6ic-P9-06n"/>
+                            <constraint firstItem="8gZ-sv-Q8h" firstAttribute="centerY" secondItem="3vi-4T-2at" secondAttribute="centerY" id="7XZ-fa-LHr"/>
                             <constraint firstItem="3vi-4T-2at" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="9sg-56-U9f"/>
+                            <constraint firstItem="ZMy-r2-vXD" firstAttribute="centerY" secondItem="3vi-4T-2at" secondAttribute="centerY" id="CC4-3y-ak9"/>
                             <constraint firstItem="3vi-4T-2at" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ED0-k1-02j"/>
                             <constraint firstItem="8gZ-sv-Q8h" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LS1-U9-q7C"/>
                             <constraint firstItem="3vi-4T-2at" firstAttribute="top" secondItem="8gZ-sv-Q8h" secondAttribute="bottom" constant="20" id="ZTI-TO-Hmr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZMy-r2-vXD" secondAttribute="trailing" constant="20" id="bMq-o2-CdC"/>
+                            <constraint firstItem="ZMy-r2-vXD" firstAttribute="width" secondItem="3vi-4T-2at" secondAttribute="width" id="eYM-bZ-S3Z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZMy-r2-vXD" secondAttribute="bottom" constant="20" id="gvH-zG-LVO"/>
                             <constraint firstItem="V4y-5Y-7Gl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="iKM-w6-LXo"/>
                             <constraint firstItem="3vi-4T-2at" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rTo-5f-wA2"/>
+                            <constraint firstItem="ZMy-r2-vXD" firstAttribute="height" secondItem="3vi-4T-2at" secondAttribute="height" id="sH6-ez-maf"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3xi-V8-fGF"/>
+                                <exclude reference="bMq-o2-CdC"/>
+                                <exclude reference="7XZ-fa-LHr"/>
+                                <exclude reference="5SL-yV-Iik"/>
+                                <exclude reference="6Hz-ZX-EcP"/>
+                                <exclude reference="CC4-3y-ak9"/>
+                                <exclude reference="sH6-ez-maf"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="3xi-V8-fGF"/>
+                                <include reference="bMq-o2-CdC"/>
+                                <include reference="7XZ-fa-LHr"/>
+                                <exclude reference="LS1-U9-q7C"/>
+                                <include reference="5SL-yV-Iik"/>
+                                <include reference="6Hz-ZX-EcP"/>
+                                <exclude reference="9sg-56-U9f"/>
+                                <exclude reference="ZTI-TO-Hmr"/>
+                                <exclude reference="rTo-5f-wA2"/>
+                                <exclude reference="6ic-P9-06n"/>
+                                <include reference="CC4-3y-ak9"/>
+                                <exclude reference="eYM-bZ-S3Z"/>
+                                <include reference="sH6-ez-maf"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="layoutOneButton" destination="eD9-f5-f3x" id="BOh-y5-AUa"/>
                         <outlet property="layoutThreeButton" destination="jTE-tU-Mfw" id="1wJ-ah-YNH"/>
                         <outlet property="layoutTwoButton" destination="cPm-8R-rRa" id="Y6c-Mu-kBR"/>
+                        <outlet property="swipeTextLabel" destination="ccZ-Xn-9qy" id="iYq-iH-2uM"/>
                         <outlet property="viewFour" destination="v19-ih-ksY" id="jjr-jO-pd5"/>
                         <outlet property="viewTwo" destination="biF-QM-ouX" id="N3a-uz-amD"/>
                     </connections>
@@ -161,6 +197,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Arrow Left" width="3.3333332538604736" height="4.6666665077209473"/>
         <image name="Arrow Up" width="4.6666665077209473" height="3.3333332538604736"/>
         <image name="Instagrid" width="41.333332061767578" height="13"/>
         <image name="Layout 1" width="26.666666030883789" height="26.666666030883789"/>

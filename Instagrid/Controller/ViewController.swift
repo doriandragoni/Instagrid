@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var swipeTextLabel: UILabel!
     @IBOutlet weak var layoutOneButton: UIButton!
     @IBOutlet weak var layoutTwoButton: UIButton!
     @IBOutlet weak var layoutThreeButton: UIButton!
@@ -17,6 +18,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initGrid()
+    }
+    
+    override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
+        changeSwipeTextLabel(deviceOrientation: toInterfaceOrientation)
+    }
+    
+    private func changeSwipeTextLabel(deviceOrientation: UIInterfaceOrientation) {
+        switch deviceOrientation {
+        case .portrait:
+            swipeTextLabel.text = "Swipe up to share"
+        case .landscapeLeft, .landscapeRight:
+            swipeTextLabel.text = "Swipe left to share"
+        case .portraitUpsideDown, .unknown:
+            break
+        @unknown default:
+            break
+        }
     }
     
     private func initGrid() {
@@ -31,27 +49,23 @@ class ViewController: UIViewController {
             layoutOneButton.setImage(UIImage(named: "Selected"), for: .normal)
             layoutTwoButton.setImage(nil, for: .normal)
             layoutThreeButton.setImage(nil, for: .normal)
-            break
         case 2:
             viewTwo.isHidden = false
             viewFour.isHidden = true
             layoutOneButton.setImage(nil, for: .normal)
             layoutTwoButton.setImage(UIImage(named: "Selected"), for: .normal)
             layoutThreeButton.setImage(nil, for: .normal)
-            break
         case 3:
             viewTwo.isHidden = false
             viewFour.isHidden = false
             layoutOneButton.setImage(nil, for: .normal)
             layoutTwoButton.setImage(nil, for: .normal)
             layoutThreeButton.setImage(UIImage(named: "Selected"), for: .normal)
-            break
         default:
             initGrid()
-            break
         }
     }
-
+    
     @IBAction func onLayoutOneTapped() {
         setGrid(index: 1)
     }
