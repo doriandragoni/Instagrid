@@ -8,11 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var secondViewWidthConstraint: NSLayoutConstraint!
-    @IBOutlet weak var fourthViewWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var layoutOneButton: UIButton!
     @IBOutlet weak var layoutTwoButton: UIButton!
     @IBOutlet weak var layoutThreeButton: UIButton!
+    @IBOutlet weak var viewTwo: UIView!
+    @IBOutlet weak var viewFour: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,28 +20,28 @@ class ViewController: UIViewController {
     }
     
     private func initGrid() {
-        secondViewWidthConstraint.priority = .defaultLow
-        fourthViewWidthConstraint.priority = .required
-        layoutOneButton.setImage(nil, for: .normal)
-        layoutTwoButton.setImage(UIImage(named: "Selected"), for: .normal)
-        layoutThreeButton.setImage(nil, for: .normal)
+        setGrid(index: 2)
     }
     
     private func setGrid(index: Int) {
         switch index {
         case 1:
-            secondViewWidthConstraint.priority = .required
-            fourthViewWidthConstraint.priority = .defaultLow
+            viewTwo.isHidden = true
+            viewFour.isHidden = false
             layoutOneButton.setImage(UIImage(named: "Selected"), for: .normal)
             layoutTwoButton.setImage(nil, for: .normal)
             layoutThreeButton.setImage(nil, for: .normal)
             break
         case 2:
-            initGrid()
+            viewTwo.isHidden = false
+            viewFour.isHidden = true
+            layoutOneButton.setImage(nil, for: .normal)
+            layoutTwoButton.setImage(UIImage(named: "Selected"), for: .normal)
+            layoutThreeButton.setImage(nil, for: .normal)
             break
         case 3:
-            secondViewWidthConstraint.priority = .defaultLow
-            fourthViewWidthConstraint.priority = .defaultLow
+            viewTwo.isHidden = false
+            viewFour.isHidden = false
             layoutOneButton.setImage(nil, for: .normal)
             layoutTwoButton.setImage(nil, for: .normal)
             layoutThreeButton.setImage(UIImage(named: "Selected"), for: .normal)
