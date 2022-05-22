@@ -32,7 +32,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZMy-r2-vXD">
                                 <rect key="frame" x="62.666666666666657" y="688" width="249.99999999999997" height="70"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eD9-f5-f3x" userLabel="Layout 1">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eD9-f5-f3x" userLabel="Layout 1">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="eD9-f5-f3x" secondAttribute="height" multiplier="1:1" id="8sH-4J-AK8"/>
@@ -43,7 +43,7 @@
                                             <action selector="onLayoutOneTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="mSq-0i-Ifb"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPm-8R-rRa" userLabel="Layout 2">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPm-8R-rRa" userLabel="Layout 2">
                                         <rect key="frame" x="90" y="0.0" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="cPm-8R-rRa" secondAttribute="height" multiplier="1:1" id="oPF-am-AWl"/>
@@ -54,13 +54,13 @@
                                             <action selector="onLayoutTwoTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="ssW-5h-ktx"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTE-tU-Mfw" userLabel="Layout 3">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTE-tU-Mfw" userLabel="Layout 3">
                                         <rect key="frame" x="180" y="0.0" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="jTE-tU-Mfw" secondAttribute="height" multiplier="1:1" id="1ot-Q5-whf"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" backgroundImage="Layout 3"/>
+                                        <state key="normal" image="Selected" backgroundImage="Layout 3"/>
                                         <connections>
                                             <action selector="onLayoutThreeTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="XhK-rr-JNS"/>
                                         </connections>
@@ -152,6 +152,9 @@
                     </view>
                     <connections>
                         <outlet property="fourthViewWidthConstraint" destination="lW4-dX-LTq" id="i9Q-XR-PfY"/>
+                        <outlet property="layoutOneButton" destination="eD9-f5-f3x" id="BOh-y5-AUa"/>
+                        <outlet property="layoutThreeButton" destination="jTE-tU-Mfw" id="1wJ-ah-YNH"/>
+                        <outlet property="layoutTwoButton" destination="cPm-8R-rRa" id="Y6c-Mu-kBR"/>
                         <outlet property="secondViewWidthConstraint" destination="zmU-d2-pDd" id="0wb-fK-87h"/>
                     </connections>
                 </viewController>
@@ -166,6 +169,7 @@
         <image name="Layout 1" width="26.666666030883789" height="26.666666030883789"/>
         <image name="Layout 2" width="26.666666030883789" height="26.666666030883789"/>
         <image name="Layout 3" width="26.666666030883789" height="26.666666030883789"/>
+        <image name="Selected" width="26.666666030883789" height="26.666666030883789"/>
         <namedColor name="SecondaryColor">
             <color red="0.071000002324581146" green="0.3919999897480011" blue="0.60399997234344482" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

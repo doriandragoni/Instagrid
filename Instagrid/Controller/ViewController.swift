@@ -10,6 +10,9 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var secondViewWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var fourthViewWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var layoutOneButton: UIButton!
+    @IBOutlet weak var layoutTwoButton: UIButton!
+    @IBOutlet weak var layoutThreeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +22,9 @@ class ViewController: UIViewController {
     private func initGrid() {
         secondViewWidthConstraint.priority = .defaultLow
         fourthViewWidthConstraint.priority = .required
+        layoutOneButton.setImage(nil, for: .normal)
+        layoutTwoButton.setImage(UIImage(named: "Selected"), for: .normal)
+        layoutThreeButton.setImage(nil, for: .normal)
     }
     
     private func setGrid(index: Int) {
@@ -26,6 +32,9 @@ class ViewController: UIViewController {
         case 1:
             secondViewWidthConstraint.priority = .required
             fourthViewWidthConstraint.priority = .defaultLow
+            layoutOneButton.setImage(UIImage(named: "Selected"), for: .normal)
+            layoutTwoButton.setImage(nil, for: .normal)
+            layoutThreeButton.setImage(nil, for: .normal)
             break
         case 2:
             initGrid()
@@ -33,6 +42,9 @@ class ViewController: UIViewController {
         case 3:
             secondViewWidthConstraint.priority = .defaultLow
             fourthViewWidthConstraint.priority = .defaultLow
+            layoutOneButton.setImage(nil, for: .normal)
+            layoutTwoButton.setImage(nil, for: .normal)
+            layoutThreeButton.setImage(UIImage(named: "Selected"), for: .normal)
             break
         default:
             initGrid()
