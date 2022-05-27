@@ -18,6 +18,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initGrid()
+        // Use SizeClass to know if the device is in landscape mode or not
+        if traitCollection.verticalSizeClass == .compact {
+            changeSwipeTextLabel(deviceOrientation: .landscapeLeft)
+        }
     }
     
     override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
