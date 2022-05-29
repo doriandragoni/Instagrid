@@ -57,11 +57,11 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ngJ-YJ-ZF9">
                                                 <rect key="frame" x="0.0" y="0.0" width="275" height="132.33333333333334"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dth-9H-A9O" userLabel="View 1">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dth-9H-A9O" userLabel="View 1" customClass="PictureView" customModule="Instagrid" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="132.66666666666666" height="132.33333333333334"/>
                                                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="biF-QM-ouX" userLabel="View 2">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="biF-QM-ouX" userLabel="View 2" customClass="PictureView" customModule="Instagrid" customModuleProvider="target">
                                                         <rect key="frame" x="142.66666666666663" y="0.0" width="132.33333333333337" height="132.33333333333334"/>
                                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                                     </view>
@@ -70,11 +70,11 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GzE-Dp-eam">
                                                 <rect key="frame" x="0.0" y="142.33333333333331" width="275" height="132.66666666666669"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e57-ZI-uBz" userLabel="View 3">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e57-ZI-uBz" userLabel="View 3" customClass="PictureView" customModule="Instagrid" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="132.66666666666666" height="132.66666666666666"/>
                                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v19-ih-ksY" userLabel="View 4">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v19-ih-ksY" userLabel="View 4" customClass="PictureView" customModule="Instagrid" customModuleProvider="target">
                                                         <rect key="frame" x="142.66666666666663" y="0.0" width="132.33333333333337" height="132.66666666666666"/>
                                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                     </view>
