@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2E72EA1528437AAA00199035 /* PictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E72EA1428437AAA00199035 /* PictureView.xib */; };
 		2E72EA1728437C2100199035 /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E72EA1628437C2100199035 /* PictureView.swift */; };
+		2EC37A2C2844C87400408277 /* DidTapOnPictureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC37A2B2844C87400408277 /* DidTapOnPictureDelegate.swift */; };
 		2EE941F42824919300A94F11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE941F32824919300A94F11 /* AppDelegate.swift */; };
 		2EE941F62824919300A94F11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE941F52824919300A94F11 /* SceneDelegate.swift */; };
 		2EE941F82824919300A94F11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE941F72824919300A94F11 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		2E72EA1428437AAA00199035 /* PictureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureView.xib; sourceTree = "<group>"; };
 		2E72EA1628437C2100199035 /* PictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
+		2EC37A2B2844C87400408277 /* DidTapOnPictureDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DidTapOnPictureDelegate.swift; sourceTree = "<group>"; };
 		2EE941F02824919300A94F11 /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EE941F32824919300A94F11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EE941F52824919300A94F11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				2EE941F72824919300A94F11 /* ViewController.swift */,
+				2EC37A2B2844C87400408277 /* DidTapOnPictureDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				2EE941F82824919300A94F11 /* ViewController.swift in Sources */,
 				2EE941F42824919300A94F11 /* AppDelegate.swift in Sources */,
 				2EE941F62824919300A94F11 /* SceneDelegate.swift in Sources */,
+				2EC37A2C2844C87400408277 /* DidTapOnPictureDelegate.swift in Sources */,
 				2E72EA1728437C2100199035 /* PictureView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

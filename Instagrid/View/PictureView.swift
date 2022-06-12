@@ -9,10 +9,12 @@ import UIKit
 
 @IBDesignable
 class PictureView: UIView {
+    @IBOutlet weak var delegate: DidTapOnPictureDelegate?
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var plusIcon: UIImageView!
+    
     let nibName = "PictureView"
     var contentView: UIView?
-    
-    @IBOutlet weak var plusIcon: UIImageView!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -30,8 +32,8 @@ class PictureView: UIView {
         self.addSubview(view)
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewTapped(tapGestureRecognizer:)))
-            view.isUserInteractionEnabled = true
-            view.addGestureRecognizer(tapGestureRecognizer)
+        view.isUserInteractionEnabled = true
+        view.addGestureRecognizer(tapGestureRecognizer)
         
         contentView = view
     }
@@ -42,15 +44,16 @@ class PictureView: UIView {
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
     
-    @objc func viewTapped(tapGestureRecognizer: UITapGestureRecognizer)
-    {
-//        let tappedView = tapGestureRecognizer.view as! UIView
-
+    @objc func viewTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        //        let tappedView = tapGestureRecognizer.view as! UIView
+        
+        self.delegate?.didTapOnPicture(picture: self)
+        
         // Your action
-        if plusIcon.isHidden {
-            plusIcon.isHidden = false
-        } else {
-            plusIcon.isHidden = true
-        }
+//        if plusIcon.isHidden {
+//            plusIcon.isHidden = false
+//        } else {
+//            plusIcon.isHidden = true
+//        }
     }
 }

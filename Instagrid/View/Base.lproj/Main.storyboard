@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -57,26 +56,34 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ngJ-YJ-ZF9">
                                                 <rect key="frame" x="0.0" y="0.0" width="275" height="132.33333333333334"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dth-9H-A9O" userLabel="View 1" customClass="PictureView" customModule="Instagrid" customModuleProvider="target">
+                                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dth-9H-A9O" userLabel="View 1" customClass="PictureView" customModule="Instagrid" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="132.66666666666666" height="132.33333333333334"/>
-                                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="pBb-a8-N9p"/>
+                                                        </connections>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="biF-QM-ouX" userLabel="View 2" customClass="PictureView" customModule="Instagrid" customModuleProvider="target">
+                                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="biF-QM-ouX" userLabel="View 2" customClass="PictureView" customModule="Instagrid" customModuleProvider="target">
                                                         <rect key="frame" x="142.66666666666663" y="0.0" width="132.33333333333337" height="132.33333333333334"/>
-                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="phF-C1-0Hy"/>
+                                                        </connections>
                                                     </view>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GzE-Dp-eam">
                                                 <rect key="frame" x="0.0" y="142.33333333333331" width="275" height="132.66666666666669"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e57-ZI-uBz" userLabel="View 3" customClass="PictureView" customModule="Instagrid" customModuleProvider="target">
+                                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e57-ZI-uBz" userLabel="View 3" customClass="PictureView" customModule="Instagrid" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="132.66666666666666" height="132.66666666666666"/>
-                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="iBu-iX-ysS"/>
+                                                        </connections>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v19-ih-ksY" userLabel="View 4" customClass="PictureView" customModule="Instagrid" customModuleProvider="target">
+                                                    <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v19-ih-ksY" userLabel="View 4" customClass="PictureView" customModule="Instagrid" customModuleProvider="target">
                                                         <rect key="frame" x="142.66666666666663" y="0.0" width="132.33333333333337" height="132.66666666666666"/>
-                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="5si-e1-tlb"/>
+                                                        </connections>
                                                     </view>
                                                 </subviews>
                                             </stackView>
@@ -186,9 +193,11 @@
                         <outlet property="layoutOneButton" destination="eD9-f5-f3x" id="BOh-y5-AUa"/>
                         <outlet property="layoutThreeButton" destination="jTE-tU-Mfw" id="1wJ-ah-YNH"/>
                         <outlet property="layoutTwoButton" destination="cPm-8R-rRa" id="Y6c-Mu-kBR"/>
+                        <outlet property="pictureViewFour" destination="v19-ih-ksY" id="8sX-Vi-gws"/>
+                        <outlet property="pictureViewOne" destination="dth-9H-A9O" id="Yv6-Ee-yG4"/>
+                        <outlet property="pictureViewThree" destination="e57-ZI-uBz" id="GpC-OH-RDy"/>
+                        <outlet property="pictureViewTwo" destination="biF-QM-ouX" id="MdA-aE-N7m"/>
                         <outlet property="swipeTextLabel" destination="ccZ-Xn-9qy" id="iYq-iH-2uM"/>
-                        <outlet property="viewFour" destination="v19-ih-ksY" id="jjr-jO-pd5"/>
-                        <outlet property="viewTwo" destination="biF-QM-ouX" id="N3a-uz-amD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -207,17 +216,5 @@
         <namedColor name="SecondaryColor">
             <color red="0.071000002324581146" green="0.3919999897480011" blue="0.60399997234344482" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

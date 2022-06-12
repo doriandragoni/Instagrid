@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PictureView" customModule="Instagrid" customModuleProvider="target">
             <connections>
+                <outlet property="imageView" destination="z0G-Vj-wP8" id="mWI-KO-U5F"/>
                 <outlet property="plusIcon" destination="Lx4-tt-jLl" id="aZi-vq-SSg"/>
             </connections>
         </placeholder>
@@ -25,12 +26,19 @@
                         <constraint firstAttribute="width" constant="30" id="kxX-39-Zet"/>
                     </constraints>
                 </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z0G-Vj-wP8">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="z0G-Vj-wP8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="RlN-PZ-wWp"/>
                 <constraint firstItem="Lx4-tt-jLl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="StU-KM-lV0"/>
                 <constraint firstItem="Lx4-tt-jLl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="nsg-xo-gD6"/>
+                <constraint firstItem="z0G-Vj-wP8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="pEz-W2-L2M"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="z0G-Vj-wP8" secondAttribute="trailing" id="vLB-p0-ESA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="z0G-Vj-wP8" secondAttribute="bottom" id="xfv-0a-CV8"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
