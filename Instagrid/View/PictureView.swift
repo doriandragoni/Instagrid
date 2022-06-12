@@ -45,15 +45,6 @@ class PictureView: UIView {
     }
     
     @objc func viewTapped(tapGestureRecognizer: UITapGestureRecognizer) {
-        //        let tappedView = tapGestureRecognizer.view as! UIView
-        
         self.delegate?.didTapOnPicture(picture: self)
-        
-        // Your action
-//        if plusIcon.isHidden {
-//            plusIcon.isHidden = false
-//        } else {
-//            plusIcon.isHidden = true
-//        }
     }
 }

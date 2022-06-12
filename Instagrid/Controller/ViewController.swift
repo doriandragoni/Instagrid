@@ -112,7 +112,6 @@ extension ViewController: PHPickerViewControllerDelegate  {
                 item.loadObject(ofClass: UIImage.self) { (image, error) in
                     DispatchQueue.main.async {
                         if let image = image as? UIImage {
-                            //Access your image
                             self.tappedPictureView?.imageView.image = nil
                             self.tappedPictureView?.imageView.image = image
                             self.tappedPictureView?.plusIcon.isHidden = true
