@@ -9,53 +9,48 @@ import UIKit
 
 @IBDesignable
 class PictureView: UIView {
-    @IBOutlet weak var delegate: DidTapOnPictureDelegate?
+    @IBOutlet weak var delegate: DidTapOnPictureViewDelegate?
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var plusIcon: UIImageView!
-    
-    let nibName = "PictureView"
-    var contentView: UIView?
-    
+
+    private let nibName = "PictureXib"
+    private var contentView: UIView?
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
-    
-    func commonInit() {
+
+    private func commonInit() {
         guard let view = loadViewFromNib() else { return }
         view.frame = self.bounds
         self.addSubview(view)
-        
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewTapped(tapGestureRecognizer:)))
+
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
         view.isUserInteractionEnabled = true
         view.addGestureRecognizer(tapGestureRecognizer)
-        
+
         contentView = view
     }
-    
-    func loadViewFromNib() -> UIView? {
+
+    private func loadViewFromNib() -> UIView? {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: nibName, bundle: bundle)
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
-    
-    func removePicture() {
-        imageView.image = nil
-        plusIcon.isHidden = false
-    }
-    
+
     func setPicture(picture: UIImage) {
         imageView.image = nil
         imageView.image = picture
         plusIcon.isHidden = true
     }
-    
+
     @objc func viewTapped(tapGestureRecognizer: UITapGestureRecognizer) {
-        self.delegate?.didTapOnPicture(picture: self)
+        self.delegate?.didTapOnPictureView(pictureView: self)
     }
 }

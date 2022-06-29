@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E72EA1528437AAA00199035 /* PictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E72EA1428437AAA00199035 /* PictureView.xib */; };
+		2E72EA1528437AAA00199035 /* PictureXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E72EA1428437AAA00199035 /* PictureXib.xib */; };
 		2E72EA1728437C2100199035 /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E72EA1628437C2100199035 /* PictureView.swift */; };
-		2EC37A2C2844C87400408277 /* DidTapOnPictureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC37A2B2844C87400408277 /* DidTapOnPictureDelegate.swift */; };
+		2E969D4B2859E7FC000BA4D5 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E969D4A2859E7FC000BA4D5 /* ImageManager.swift */; };
+		2EC37A2C2844C87400408277 /* DidTapOnPictureViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC37A2B2844C87400408277 /* DidTapOnPictureViewDelegate.swift */; };
+		2ECC4AC6285CD64800A2B7D5 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECC4AC5285CD64800A2B7D5 /* GridLayout.swift */; };
 		2EE941F42824919300A94F11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE941F32824919300A94F11 /* AppDelegate.swift */; };
 		2EE941F62824919300A94F11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE941F52824919300A94F11 /* SceneDelegate.swift */; };
 		2EE941F82824919300A94F11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE941F72824919300A94F11 /* ViewController.swift */; };
-		2EE941FB2824919300A94F11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EE941F92824919300A94F11 /* Main.storyboard */; };
+		2EE941FB2824919300A94F11 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EE941F92824919300A94F11 /* MainStoryboard.storyboard */; };
 		2EE941FD2824919400A94F11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EE941FC2824919400A94F11 /* Assets.xcassets */; };
 		2EE942002824919400A94F11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EE941FE2824919400A94F11 /* LaunchScreen.storyboard */; };
 		2EE9420B282492FE00A94F11 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2EE9420A282492FE00A94F11 /* Delm-Medium.otf */; };
@@ -21,14 +23,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2E72EA1428437AAA00199035 /* PictureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureView.xib; sourceTree = "<group>"; };
+		2E72EA1428437AAA00199035 /* PictureXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureXib.xib; sourceTree = "<group>"; };
 		2E72EA1628437C2100199035 /* PictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
-		2EC37A2B2844C87400408277 /* DidTapOnPictureDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DidTapOnPictureDelegate.swift; sourceTree = "<group>"; };
+		2E969D4A2859E7FC000BA4D5 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		2EC37A2B2844C87400408277 /* DidTapOnPictureViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DidTapOnPictureViewDelegate.swift; sourceTree = "<group>"; };
+		2ECC4AC5285CD64800A2B7D5 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		2EE941F02824919300A94F11 /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EE941F32824919300A94F11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EE941F52824919300A94F11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2EE941F72824919300A94F11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2EE941FA2824919300A94F11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2EE941FA2824919300A94F11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		2EE941FC2824919400A94F11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EE941FF2824919400A94F11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2EE942012824919400A94F11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2ECC4AC4285CD63100A2B7D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2E969D4A2859E7FC000BA4D5 /* ImageManager.swift */,
+				2ECC4AC5285CD64800A2B7D5 /* GridLayout.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2EE941E72824919300A94F11 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +79,7 @@
 		2EE941F22824919300A94F11 /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
+				2ECC4AC4285CD63100A2B7D5 /* Model */,
 				2EE94209282492B100A94F11 /* View */,
 				2EE942082824928F00A94F11 /* Controller */,
 				2EE942072824927900A94F11 /* Supporting Files */,
@@ -91,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				2EE941F72824919300A94F11 /* ViewController.swift */,
-				2EC37A2B2844C87400408277 /* DidTapOnPictureDelegate.swift */,
+				2EC37A2B2844C87400408277 /* DidTapOnPictureViewDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -99,8 +113,8 @@
 		2EE94209282492B100A94F11 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2EE941F92824919300A94F11 /* Main.storyboard */,
-				2E72EA1428437AAA00199035 /* PictureView.xib */,
+				2EE941F92824919300A94F11 /* MainStoryboard.storyboard */,
+				2E72EA1428437AAA00199035 /* PictureXib.xib */,
 				2E72EA1628437C2100199035 /* PictureView.swift */,
 			);
 			path = View;
@@ -113,6 +127,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EE942042824919400A94F11 /* Build configuration list for PBXNativeTarget "Instagrid" */;
 			buildPhases = (
+				2E11DA1D2860D87000CE14A7 /* Swiftlint */,
 				2EE941EC2824919300A94F11 /* Sources */,
 				2EE941ED2824919300A94F11 /* Frameworks */,
 				2EE941EE2824919300A94F11 /* Resources */,
@@ -165,15 +180,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EE942002824919400A94F11 /* LaunchScreen.storyboard in Resources */,
-				2E72EA1528437AAA00199035 /* PictureView.xib in Resources */,
+				2E72EA1528437AAA00199035 /* PictureXib.xib in Resources */,
 				2EE941FD2824919400A94F11 /* Assets.xcassets in Resources */,
 				2EE9420D2824930A00A94F11 /* ThirstySoftRegular.otf in Resources */,
 				2EE9420B282492FE00A94F11 /* Delm-Medium.otf in Resources */,
-				2EE941FB2824919300A94F11 /* Main.storyboard in Resources */,
+				2EE941FB2824919300A94F11 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E11DA1D2860D87000CE14A7 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2EE941EC2824919300A94F11 /* Sources */ = {
@@ -183,20 +219,22 @@
 				2EE941F82824919300A94F11 /* ViewController.swift in Sources */,
 				2EE941F42824919300A94F11 /* AppDelegate.swift in Sources */,
 				2EE941F62824919300A94F11 /* SceneDelegate.swift in Sources */,
-				2EC37A2C2844C87400408277 /* DidTapOnPictureDelegate.swift in Sources */,
+				2EC37A2C2844C87400408277 /* DidTapOnPictureViewDelegate.swift in Sources */,
 				2E72EA1728437C2100199035 /* PictureView.swift in Sources */,
+				2ECC4AC6285CD64800A2B7D5 /* GridLayout.swift in Sources */,
+				2E969D4B2859E7FC000BA4D5 /* ImageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2EE941F92824919300A94F11 /* Main.storyboard */ = {
+		2EE941F92824919300A94F11 /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2EE941FA2824919300A94F11 /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 		2EE941FE2824919400A94F11 /* LaunchScreen.storyboard */ = {
@@ -336,7 +374,7 @@
 				INFOPLIST_FILE = "Instagrid/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = MainStoryboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -365,7 +403,7 @@
 				INFOPLIST_FILE = "Instagrid/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = MainStoryboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
