@@ -17,14 +17,14 @@ class ViewController: UIViewController, DidTapOnPictureViewDelegate {
     @IBOutlet weak var pictureViewTwo: PictureView!
     @IBOutlet weak var pictureViewThree: PictureView!
     @IBOutlet weak var pictureViewFour: PictureView!
+    @IBOutlet weak var gridView: UIView!
 
-    lazy var imageViews: [UIImageView] = [
+    private lazy var imageViews: [UIImageView] = [
         pictureViewOne.imageView,
         pictureViewTwo.imageView,
         pictureViewThree.imageView,
         pictureViewFour.imageView
     ]
-
     private var gridLayout: GridLayout = .two
     private var imageManager: ImageManager = .init()
     private var tappedPictureView: PictureView?
@@ -34,26 +34,108 @@ class ViewController: UIViewController, DidTapOnPictureViewDelegate {
         super.viewDidLoad()
         initGrid()
         initPicker()
-        // Use SizeClass to know if the device is in landscape mode or not at launch
-        if traitCollection.verticalSizeClass == .compact {
-            changeSwipeTextLabel(deviceOrientation: .landscapeLeft)
+
+        // Use SizeClass to know if the device is in landscape mode at launch
+        setSwipeTextLabel(verticalSizeClass: traitCollection.verticalSizeClass)
+
+        let panGestureRecongnizer = UIPanGestureRecognizer(target: self, action: #selector(swipeGridView))
+        gridView.addGestureRecognizer(panGestureRecongnizer)
+    }
+
+    override func willTransition(to newCollection: UITraitCollection,
+                                 with coordinator: UIViewControllerTransitionCoordinator) {
+        setSwipeTextLabel(verticalSizeClass: newCollection.verticalSizeClass)
+    }
+
+    private func setSwipeTextLabel(verticalSizeClass: UIUserInterfaceSizeClass) {
+        switch verticalSizeClass {
+        case .compact:
+            swipeTextLabel.text = "Swipe left to share"
+        case .regular, .unspecified:
+            swipeTextLabel.text = "Swipe up to share"
+        @unknown default:
+            break
         }
     }
 
-    override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
-        changeSwipeTextLabel(deviceOrientation: toInterfaceOrientation)
+    @objc private func swipeGridView(_ sender: UIPanGestureRecognizer) {
+        switch sender.state {
+        case .began, .changed:
+            swipeGridViewWith(gesture: sender)
+        case .cancelled, .ended:
+            endSwipeGridViewWith(gesture: sender)
+        default:
+            break
+        }
     }
 
-    private func changeSwipeTextLabel(deviceOrientation: UIInterfaceOrientation) {
-        switch deviceOrientation {
-        case .portrait:
-            swipeTextLabel.text = "Swipe up to share"
-        case .landscapeLeft, .landscapeRight:
-            swipeTextLabel.text = "Swipe left to share"
-        case .portraitUpsideDown, .unknown:
-            break
-        @unknown default:
-            break
+    private func swipeGridViewWith(gesture: UIPanGestureRecognizer) {
+        let translation = gesture.translation(in: gridView)
+        if traitCollection.verticalSizeClass == .compact {
+            if translation.x < 0 {
+                gridView.transform = CGAffineTransform(translationX: translation.x, y: 0)
+            }
+        } else {
+            if translation.y < 0 {
+                gridView.transform = CGAffineTransform(translationX: 0, y: translation.y)
+            }
+        }
+    }
+
+    private func endSwipeGridViewWith(gesture: UIPanGestureRecognizer) {
+        if traitCollection.verticalSizeClass == .compact {
+            endSwipeLeftGridViewWith(gesture: gesture)
+        } else {
+            endSwipeUpGridViewWith(gesture: gesture)
+        }
+    }
+
+    private func endSwipeLeftGridViewWith(gesture: UIPanGestureRecognizer) {
+        if gesture.translation(in: gridView).x < 0 {
+            let screenWidth = UIScreen.main.bounds.width
+            let targetPoint = (-screenWidth / 2) - (gridView.bounds.width / 2)
+            let transform = CGAffineTransform(translationX: targetPoint, y: 0)
+
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5,
+                           options: [], animations: {
+                self.gridView.transform = transform
+            }, completion: { success in
+                if success {
+                    self.openShareMenu(gesture: gesture)
+                }
+            })
+        }
+    }
+
+    private func endSwipeUpGridViewWith(gesture: UIPanGestureRecognizer) {
+        if gesture.translation(in: gridView).y < 0 {
+            let screenHeight = UIScreen.main.bounds.height
+            let targetPoint = (-screenHeight / 2) - (gridView.bounds.height / 2)
+            let transform = CGAffineTransform(translationX: 0, y: targetPoint)
+
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5,
+                           options: [], animations: {
+                self.gridView.transform = transform
+            }, completion: { success in
+                if success {
+                    self.openShareMenu(gesture: gesture)
+                }
+            })
+        }
+    }
+
+    private func openShareMenu(gesture: UIPanGestureRecognizer) {
+        let renderer = UIGraphicsImageRenderer(size: gridView.bounds.size)
+        let gridViewScreenshot = renderer.image { _ in
+            gridView.drawHierarchy(in: gridView.bounds, afterScreenUpdates: true)
+        }
+        let avc = UIActivityViewController(activityItems: [gridViewScreenshot], applicationActivities: nil)
+        present(avc, animated: true)
+        avc.completionWithItemsHandler = { (_, _, _, _) in
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5,
+                           animations: {
+                self.gridView.transform = .identity
+            })
         }
     }
 

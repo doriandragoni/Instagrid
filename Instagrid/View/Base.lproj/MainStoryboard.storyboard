@@ -47,7 +47,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3vi-4T-2at">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3vi-4T-2at" userLabel="Grid View">
                                 <rect key="frame" x="40" y="258.66666666666669" width="295" height="295.00000000000006"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jhH-h6-ifn">
@@ -190,6 +190,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="gridView" destination="3vi-4T-2at" id="giX-xc-aar"/>
                         <outlet property="layoutOneButton" destination="eD9-f5-f3x" id="BOh-y5-AUa"/>
                         <outlet property="layoutThreeButton" destination="jTE-tU-Mfw" id="1wJ-ah-YNH"/>
                         <outlet property="layoutTwoButton" destination="cPm-8R-rRa" id="Y6c-Mu-kBR"/>
