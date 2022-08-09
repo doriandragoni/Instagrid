@@ -28,7 +28,7 @@
                                     <constraint firstAttribute="width" constant="125" id="pFC-rh-qN8"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8gZ-sv-Q8h">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8gZ-sv-Q8h" userLabel="Swipe Stack View">
                                 <rect key="frame" x="113.66666666666669" y="190.66666666666666" width="148" height="48"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="GzG-JO-9uR">
@@ -99,7 +99,7 @@
                                     <constraint firstAttribute="bottom" secondItem="jhH-h6-ifn" secondAttribute="bottom" constant="10" id="sx8-VQ-ZBF"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ZMy-r2-vXD">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ZMy-r2-vXD" userLabel="Layouts Stack View">
                                 <rect key="frame" x="40" y="686.33333333333337" width="295" height="71.666666666666629"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eD9-f5-f3x" userLabel="Layout 1">

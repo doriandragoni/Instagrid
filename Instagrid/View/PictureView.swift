@@ -44,13 +44,13 @@ class PictureView: UIView {
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
 
+    @objc func viewTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        self.delegate?.didTapOnPictureView(pictureView: self)
+    }
+
     func setPicture(picture: UIImage) {
         imageView.image = nil
         imageView.image = picture
         plusIcon.isHidden = true
-    }
-
-    @objc func viewTapped(tapGestureRecognizer: UITapGestureRecognizer) {
-        self.delegate?.didTapOnPictureView(pictureView: self)
     }
 }
