@@ -1,5 +1,5 @@
 //
-//  MyImages.swift
+//  ImageManager.swift
 //  Instagrid
 //
 //  Created by Dorian Dragoni on 15/06/2022.

@@ -1,5 +1,5 @@
 //
-//  Grid.swift
+//  GridLayout.swift
 //  Instagrid
 //
 //  Created by Dorian Dragoni on 17/06/2022.
