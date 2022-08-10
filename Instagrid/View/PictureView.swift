@@ -49,7 +49,6 @@ class PictureView: UIView {
     }
 
     func setPicture(picture: UIImage) {
-        imageView.image = nil
         imageView.image = picture
         plusIcon.isHidden = true
     }
