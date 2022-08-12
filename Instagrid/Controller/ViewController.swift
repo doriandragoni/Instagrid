@@ -106,7 +106,7 @@ class ViewController: UIViewController, DidTapOnPictureViewDelegate {
             }, completion: { success in
                 // Only when the gridView has completely disappeared, we can open the share menu
                 if success {
-                    self.openShareMenu(gesture: gesture)
+                    self.openShareMenu()
                 }
             })
         }
@@ -126,13 +126,13 @@ class ViewController: UIViewController, DidTapOnPictureViewDelegate {
             }, completion: { success in
                 // Only when the gridView has completely disappeared, we can open the share menu
                 if success {
-                    self.openShareMenu(gesture: gesture)
+                    self.openShareMenu()
                 }
             })
         }
     }
 
-    private func openShareMenu(gesture: UIPanGestureRecognizer) {
+    private func openShareMenu() {
         // Convert the gridView to an UIImage
         let renderer = UIGraphicsImageRenderer(size: gridView.bounds.size)
         let gridViewScreenshot = renderer.image { _ in
